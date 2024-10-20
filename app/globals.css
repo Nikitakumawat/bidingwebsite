@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --max-container-width: 1220px;
+  --max-container-width-half: calc(1220px / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+  }
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+
+p {
+  white-space: pre-wrap;
+}
+
+@layer components {
+  .max-container {
+    max-width: var(--max-container-width);
+    margin: 0 auto;
+    @apply px-5 min-[1279px]:px-0;
+  }
+
+  .full-width-wrapper {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: 1044px) {
+    .full-width-wrapper {
+      margin-left: calc(-50vw + var(--max-container-width-half));
+      margin-right: calc(-50vw + var(--max-container-width-half));
+      padding-right: calc(50vw - var(--max-container-width-half));
+      padding-left: calc(50vw - var(--max-container-width-half));
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .full-width-container {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+.react-calendar__tile--active {
+  background-color: hsl(var(--primary)) !important;
+  color: var(--primary-foreground);
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #757575 !important;
+}
+
+.carouselSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+:root {
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+.login_button{
+    background: linear-gradient(79.69deg, #1D4ED8 -0.64%, #5AD7FE 107.84%);
+}
+.product_card {
+  width: calc(100% - 24px);
+}
